@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css_folder/logIn.css">
+    <link rel="stylesheet" href="../css_folder/main.css">
+    <link rel="stylesheet" href="../css_folder/book.css">
+    <link rel="stylesheet" href="../css_folder/animation.css">
+</head>
+
+<body>
+
+    <div class="active" id="log">
+        <section class="forms-section" id="signUpForm">
+            <div class="forms">
+                <div class="form-wrapper is-active">
+                    <button type="button" class="switcher switcher-login">
+                        Login
+                        <span class="underline"></span>
+                    </button>
+                    <form class="form form-login">
+                        <fieldset>
+                            <legend>Please, enter your email and password for login.</legend>
+                            <div class="input-block">
+                                <label for="login-email">Name</label>
+                                <input id="login-email" type="text" required>
+                            </div>
+                            <div class="input-block">
+                                <label for="login-password">Password</label>
+                                <input id="login-password" type="password" required="required">
+                            </div>
+                        </fieldset>
+                        <div class="text-box">
+                            <button type="submit" class="btn-login btn btn-white btn-animate "
+                                id="logInForm">Login</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="form-wrapper">
+                    <button type="button" class="switcher switcher-signup">
+                        Sign Up
+                        <span class="underline"></span>
+                    </button>
+                    <form class="form form-signup">
+                        <fieldset>
+                            <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                            <div class="input-block">
+                                <label for="signup-email">Name</label>
+                                <input id="signup-name" type="text" required="required">
+                            </div>
+                            <div class="input-block">
+                                <label for="signup-email">E-mail</label>
+                                <input id="signup-email" type="email" required="required">
+                            </div>
+                            <div class="input-block">
+                                <label for="signup-password">Password</label>
+                                <input id="signup-password" type="password" required>
+                            </div>
+                        </fieldset>
+                        <div class="text-box">
+                            <button type="submit" class="btn-signup btn btn-white btn-animate "
+                                id="signUp">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="div"></div>
+        </section>
+    </div>
+
+
+    <nav class="notActive" id="myNav">
+
+        <a href="#" data-target="about" class="nav-link">About</a>
+        <a href="#" data-target="my_books" class="nav-link" id="myBookLink">My books</a>
+        <a href="#" data-target="rent" class="nav-link">Rent</a>
+        <a href="#" data-target="library" class="nav-link" id="libraryLink">library</a>
+        <a href="#" data-target="log_out" class="nav-link">Log out</a>
+        <div class="animation start-home"></div>
+
+    </nav>
+
+
+    <div class="pages" id="about">
+        <p id="infoAbout">
+            A digital library is a collection of documents in organized electronic form, available on the Internet
+            or on CD-ROM (compact-disk read-only memory) disks. Depending on the specific library, a user may be able
+            to access magazine articles, books, papers, images, sound files, and videos.
+            The purpose of a digital library is to provide coherent organization and convenient access to typically
+            large.
+            amounts of digital information.
+        </p>
+    </div>
+
+    <div class="pages" id="my_books">
+        <div id="myContainer">
+
+        </div>
+    </div>
+
+    <div class="pages" id="rent">
+        <fieldset id="addBook">
+
+            <select type="text" placeholder="Title" id="title">
+                <option value="">Title</option>
+                <option value="Autumn">Autumn</option>
+                <option value="Escape to Shanghai">Escape to Shanghai</option>
+                <option value="It Started With A Coffee">It Started With A Coffee</option>
+                <option value="Music Night">Music Night</option>
+                <option value="Rema">Rema</option>
+                <option value="The Other Side of the Story">The Other Side of the Story</option>
+                <option value="23 Under 1 Roof">23 Under 1 Roof</option>
+                <option value="Best Foot Forward">Best Foot Forward</option>
+                <option value="The Big Win">The Big Win</option>
+                <option value="The Tables Are Turned">The Tables Are Turned</option>
+                <option value="All For The Boss">All For The Boss</option>
+                <option value="Shining Star">Shining Star</option>
+                <option value="School for One">School for One</option>
+                <option value="Borrowed Time">Borrowed Time</option>
+                <option value="Family for a While">Family for a While</option>
+                <option value="Passport to Russia">Passport to Russia</option>
+                <option value="Rabbi Shlomo Zalman">Rabbi Shlomo Zalman</option>
+                <option value="Teens Talk">Teens Talk</option>
+                <option value="Tell Me a Tale">Tell Me a Tale</option>
+                <option value="The Zany Inventor">The Zany Inventor</option>
+            </select>
+            <input type="text" placeholder="Author" id="author">
+            <input type="text" placeholder="Genre" id="genre">
+            <button type="submit" id="rentButton">ADD</button>
+
+        </fieldset>
+    </div>
+
+    <div class="pages positionAbsolute" id="library">
+        <div id="myContainer2">
+
+        </div>
+    </div>
+
+    <div class="pages" id="log_out">
+        <div class="logOutDiv"> 
+            <p class="logoutQuestion">Are you sure you want to log out?</p>
+            <div class="text-box">
+                <button class=" logout btn-signup btn btn-white btn-animate " id="logOut">YES</button>
+            </div>
+        </div>
+        <div class="div out"></div>
+    </div>
+
+
+    <script src="../js_folder/client.js"></script>
+    <script src="../js_folder/libraryFunctions.js"></script>
+    <script src="../js_folder/spa.js"></script>
+    <script src="../js_folder/bookClass.js"></script>
+    <script src="../js_folder/dataBaseBooks.js"></script>
+    <script src="../js_folder/dataBaseLibrary.js"></script>
+    <script src="../js_folder/dataBaseUsers.js"></script>
+    <script src="../js_folder/serverLibrary.js"></script>
+    <script src="..//js_folder/serverBooks.js"></script>
+    <script src="../js_folder/serverUsers.js"></script>
+    <script src="../js_folder/network.js"></script>
+    <script src="../js_folder/fxml.js"></script>
+    <script src="../js_folder/library.js"></script>
+    <script src="../js_folder/memberClass.js"></script>
+    <script src="../js_folder/login.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <figure class="book">
+
+        <ul class='hardcover_front'>
+            <li>
+                <img src="../images/book1.jpg" width="100%" height="100%"></img>
+            </li>
+            <li></li>
+        </ul>
+
+        <ul class="page">
+
+            <li> </li>
+            <li>
+                <div>author <br>
+                    date1 <br>
+                    date2 <br>
+                    author
+                </div>
+                <button>dgf</button>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+
+
+        <ul class="hardcover_back">
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="book_spine">
+            <li></li>
+            <li></li>
+        </ul>
+
+    </figure> -->

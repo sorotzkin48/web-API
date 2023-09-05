@@ -1,0 +1,197 @@
+
+:root{
+    --size:100px;
+}
+
+#myNav{
+  position: fixed;
+  z-index: 10;
+}
+nav {
+    margin: 0px auto 0;
+    position: relative;
+    width: 100%;
+    height: 77px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+  }
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 13px;
+    color: white;
+    cursor: pointer;
+}
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  a:nth-child(1) {
+    width: 100px;
+  }
+  a:nth-child(2) {
+    width: 110px;
+  }
+  a:nth-child(3) {
+    width: 100px;
+  }
+  a:nth-child(4) {
+    width: 160px;
+  }
+  a:nth-child(5) {
+    width: 120px;
+  }
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #3498db;
+  }
+  nav .start-portefolio, a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+    background-color: #9b59b6;
+  }
+  nav .start-contact, a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 470px;
+    background-color: #e67e22;
+  }
+
+
+.pages{
+    display: none;
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    background-color: pink;
+}
+
+.active{
+  display: block; 
+  height: 100%;
+  z-index: -1;
+	width: 100vw;
+	height: 110vh;
+  margin: 0;
+  position: fixed;
+	background-color: #111;
+	background-image: linear-gradient(to top, #222 5%, #111 6%, #111 7%, transparent 7%), linear-gradient(to bottom, #111 30%, transparent 30%), linear-gradient(to right, #222, #2e2e2e 5%, transparent 5%), linear-gradient(to right, transparent 6%, #222 6%, #2e2e2e 9%, transparent 9%), linear-gradient(to right, transparent 27%, #222 27%, #2e2e2e 34%, transparent 34%), linear-gradient(to right, transparent 51%, #222 51%, #2e2e2e 57%, transparent 57%), linear-gradient(to bottom, #111 35%, transparent 35%), linear-gradient(to right, transparent 42%, #222 42%, #2e2e2e 44%, transparent 44%), linear-gradient(to right, transparent 45%, #222 45%, #2e2e2e 47%, transparent 47%), linear-gradient(to right, transparent 48%, #222 48%, #2e2e2e 50%, transparent 50%), linear-gradient(to right, transparent 87%, #222 87%, #2e2e2e 91%, transparent 91%), linear-gradient(to bottom, #111 37.5%, transparent 37.5%), linear-gradient(to right, transparent 14%, #222 14%, #2e2e2e 20%, transparent 20%), linear-gradient(to bottom, #111 40%, transparent 40%), linear-gradient(to right, transparent 10%, #222 10%, #2e2e2e 13%, transparent 13%), linear-gradient(to right, transparent 21%, #222 21%, #1a1a1a 25%, transparent 25%), linear-gradient(to right, transparent 58%, #222 58%, #2e2e2e 64%, transparent 64%), linear-gradient(to right, transparent 92%, #222 92%, #2e2e2e 95%, transparent 95%), linear-gradient(to bottom, #111 48%, transparent 48%), linear-gradient(to right, transparent 96%, #222 96%, #1a1a1a 99%, transparent 99%), linear-gradient(to bottom, transparent 68.5%, transparent 76%, #111 76%, #111 77.5%, transparent 77.5%, transparent 86%, #111 86%, #111 87.5%, transparent 87.5%), linear-gradient(to right, transparent 35%, #222 35%, #2e2e2e 41%, transparent 41%), linear-gradient(to bottom, #111 68%, transparent 68%), linear-gradient(to right, transparent 78%, #333 78%, #333 80%, transparent 80%, transparent 82%, #333 82%, #333 83%, transparent 83%), linear-gradient(to right, transparent 66%, #222 66%, #2e2e2e 85%, transparent 85%);
+  background-size: 300px 150px;
+	background-position: center bottom;
+}
+
+
+.books{
+    background-color: aqua;
+    height: calc(4.5* var(--size));
+    width: calc(3 * var(--size));
+    border-radius: 10%;
+}
+
+
+#addBook{
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  grid-gap: calc(0.2 * var(--size));
+  width: calc(5 * var(--size));
+  margin: calc(1 * var(--size)) auto;
+}
+
+.positionAbsolute{
+  position: absolute !important;
+  height: auto !important;
+}
+
+input, #rentButton, select{
+  width: calc(3 * var(--size));
+  height:calc(0.4 * var(--size));
+  text-align: center;
+  border-radius: 10px;
+}
+::placeholder{
+  align-self: center;
+}
+
+#infoAbout{
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(7* var(--size));
+  margin-top: calc(1.2 * var(--size));
+  line-height: 50px;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.logoutQuestion {
+  margin-left: 108px;
+  width: calc(7* var(--size));
+  top: 14px;
+  line-height: 50px;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+}
+
+#logOut{
+  background: #fbfdff;
+  box-shadow: inset 0 0 0 2px #a7e245;
+  transform: translateX(30%);
+
+  display: block;
+  min-width: 120px;
+  margin: 30px auto 10px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 25px;
+  border: none;
+  transition: all .3s ease-out;
+}
+
+
+.logOutDiv {
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-top: 374px;
+    margin-left: 1;
+    background-color: #fbf1f14f;
+    backdrop-filter: blur(5px);
+    width: 582px;
+    height: 149px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+}
